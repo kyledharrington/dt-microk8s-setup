@@ -82,7 +82,7 @@ sleep 10
 # creates storage class and persistent volume claim for CSI driver
 echo creating storace class and PVC for CSI drivers....
 sleep 1
-sudo microk8s kubectl apply -f /dt-microk8s-setup/yaml/storage/microk8s-nfs.yaml
+sudo microk8s kubectl apply -f dt-microk8s-setup/yaml/storage/microk8s-nfs.yaml
 sleep 5
 
 # Deploy Dynatrace components. 
@@ -112,10 +112,10 @@ echo once all pods are running for 2 minutes, you can exit this script and deplo
 sleep 2
 echo deploying dynatrace operator and sleeping for 60 seconds... 
 sleep 1 
-sudo microk8s kubectl apply -f /dt-microk8s-setup/yaml/operator/v1_19_operator.yaml
+sudo microk8s kubectl apply -f dt-microk8s-setup/yaml/operator/v1_19_operator.yaml
 sleep 60 
 echo deploying dynatrace csi driver pods and sleeping for 60 seconds... 
-sudo microk8s kubectl apply -f /dt-microk8s-setup/yaml/csi-driver/csi-driver_v1_19.yaml
+sudo microk8s kubectl apply -f dt-microk8s-setup/yaml/csi-driver/csi-driver_v1_19.yaml
 sleep 60
 echo running kubectl get pod -n dynatrace -w
 sleep 1 
