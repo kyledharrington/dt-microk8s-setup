@@ -45,7 +45,7 @@ sudo microk8s enable dns dashboard storage helm3
 # install nfs kernel
 echo installing nfs server requirements...
 sleep 1
-sudo apt-get install nfs-kernel-server
+sudo apt-get install nfs-kernel-server -y 
 
 # modify permisssions for filesystem
 echo modifying directory permissions...
